@@ -1,3 +1,5 @@
 Use scripts/build.sh to build. _install is root filesystem.  
 After boot kernel with QEMU. /test contain test program and test scripts.  
 You can use scripts in /test/scripts to reproduce the test result.  
+To produce standard kernel, please go to include/linux/mm_types.h and set COUNT_PAGE_FAULT = 0,  
+also go to fs/proc/Makefile and remove working_set_size.o.
