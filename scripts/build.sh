@@ -1,10 +1,17 @@
 IMAGE=./arch/x86_64/boot/bzImage 
 ROOTFS=./root.img 
+KERNEL_PATH=/home/dooog308/OS_final_project/OS_Final_Project
 
-cd /home/dooog308/OS_final_project/linux-6.19.9
-
+cd $KERNEL_PATH
 rm root.img
 rm -r tmp
+
+#git will ignore empty directory, so we need to recreat it.
+cd _install
+mkdir dev
+mkdir proc
+mkdir sys
+cd ../
 
 #build rootfs
 dd if=/dev/zero of=root.img bs=1M count=2048

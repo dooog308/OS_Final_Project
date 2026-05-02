@@ -1,1 +1,1 @@
-/home/dooog308/OS_final_project/linux-6.19.9/scripts/gdb/vmlinux-gdb.py
+/home/dooog308/OS_final_project/OS_Final_Project/scripts/gdb/vmlinux-gdb.py
