@@ -9,7 +9,7 @@ int main(void)
 	long ret=9;
 	int *p=NULL;
 
-	p = (int*)malloc(sizeof(int)*1024);
+	p = (int*)malloc(sizeof(int)*10240);
 	while(1)
 	{
 		for(int i=0;i<1024;i++) p[0] = 1;

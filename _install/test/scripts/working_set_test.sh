@@ -8,9 +8,6 @@ cd /test
 ./$FILE2&
 ./$FILE3&
 
-rm -f ./$RESULT
-touch ./$RESULT
-
 ps|grep -E "$FILE1|$FILE2|$FILE3" | while read line
 do
 	echo $line | cut -d ' ' -f1 > $OUTPUT

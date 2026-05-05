@@ -148,13 +148,14 @@ static int working_set_size_proc_open(struct inode *inode, struct file *file)
 static ssize_t working_set_size_proc_write(struct file *file, const char __user *buf, size_t size, loff_t *off)
 {
 	char kbuf[64]={0};
+	int ret = 0;
 
 	if(*off != 0) return -EFAULT;
 
 	if(copy_from_user(kbuf, buf, size)) return -EFAULT;
 	
 	kbuf[size-1] = '\0';
-	kstrtoint(kbuf, 0, &registered_pid[reg_size++]);
+	ret = kstrtoint(kbuf, 0, &registered_pid[reg_size++]);
 	return size;
 }
 
